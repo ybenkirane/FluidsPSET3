@@ -8,7 +8,7 @@ Collaborators: Jasmine Zhang, Alexandre Stuart
 import numpy as np
 import matplotlib.pyplot as plt
 
-def steady_state(viscosity, height, inclination, x):
+def steadyState(viscosity, height, inclination, x):
     return (-9.8*np.sin(inclination)*(0.5*x**2 - height*x))/viscosity 
 
 LAVAvisco = 0.25
@@ -16,7 +16,7 @@ LAVAHeight = 0.1
 LAVAinc = 0.17 
 
 SSX = np.linspace(0, LAVAHeight, 30)
-SSY = steady_state(LAVAvisco, LAVAHeight, LAVAinc, np.linspace(0, LAVAHeight, 30))
+SSY = steadyState(LAVAvisco, LAVAHeight, LAVAinc, np.linspace(0, LAVAHeight, 30))
 
 plt.plot(SSX, SSY)
 plt.xlabel('Pos (m)')
